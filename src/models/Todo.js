@@ -1,9 +1,9 @@
 let item = function(desc) {
     return {desc:desc}
-}
+};
 
 let Todo = {
-    title: "My ToDo",
+    title: "Things to do today",
     items : [item("Eat"),item("Sleep"),item("Anime")]
 };
 
