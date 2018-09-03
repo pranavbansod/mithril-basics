@@ -2,4 +2,6 @@ const m = require("mithril")
 
 let toDo = require("./views/ToDo")
 
-m.mount(document.body, toDo)
+m.route(document.body, "/toDo", {
+    "/toDo": toDo
+})
