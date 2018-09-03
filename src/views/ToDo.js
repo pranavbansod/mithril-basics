@@ -1,11 +1,13 @@
 const m = require("mithril");
-let todo = require("../models/Todo")
+let toDo = require("../models/Todo")
 
 module.exports = {
     view: function () {
         let getDescForItem = function (item) {
-            return m(".todo-item",item.desc);
+            return m(".toDo-item",item.desc);
         };
-        return m(".todo",todo.items.map(getDescForItem));
+        let title = m("h1",toDo.title);
+        let itemDivs = toDo.items.map(getDescForItem);
+        return m(".toDo",title,itemDivs);
     }
 };
