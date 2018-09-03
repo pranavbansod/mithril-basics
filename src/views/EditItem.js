@@ -10,6 +10,6 @@ module.exports = {
             m("button.button[type=button]",{onclick: function () {
 
               }}, "Save")
-        ])
+        ]);
     }
 };
