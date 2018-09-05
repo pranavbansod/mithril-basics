@@ -6,7 +6,7 @@ module.exports = {
     toDo.load(vnode.attrs.id)
   },
   view: function () {
-    return m("form",[
+    return m("",[
       m("h3.label", "Description"),
       m("input.input#toDoEdit[type=text][placeholder=Write description for ToDo item]", {
         value: toDo.currentItem.desc
