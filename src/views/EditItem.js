@@ -6,13 +6,15 @@ module.exports = {
     toDo.load(vnode.attrs.id)
   },
   view: function () {
-    return m("form", [
+    return m("form",[
       m("h3.label", "Description"),
-      m("input.input[type=text][placeholder=Write description for ToDo item]", {id:"toDoDesc",value: toDo.currentItem.desc}),
-      m("button.button[type=button]", {
-        onclick: function () {
-          toDo.currentItem.desc = document.getElementById("toDoDesc").value;
-          console.log(toDo);
+      m("input.input#toDoEdit[type=text][placeholder=Write description for ToDo item]", {
+        value: toDo.currentItem.desc
+      }),
+      m("button.button[type=button]",{
+        onclick: function() {
+          let newDesc = document.getElementById("toDoEdit").value;
+          toDo.currentItem.desc = newDesc;
         }
       }, "Save")
     ]);

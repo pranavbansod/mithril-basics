@@ -11,6 +11,11 @@ body, .input, .button {
     padding: 0;
 }
 
+h1{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 .toDo-item {
     width: auto;
     background: #fafafa;
@@ -55,4 +60,10 @@ body, .input, .button {
 
 .button:hover {
     background: #bfbdbd;
+}
+
+.addToDo {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
