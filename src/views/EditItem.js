@@ -7,7 +7,7 @@ module.exports = {
   },
   view: function () {
     return m("form", [
-      m("label.label", "Description"),
+      m("h3.label", "Description"),
       m("input.input[type=text][placeholder=Write description for ToDo item]", {id:"toDoDesc",value: toDo.currentItem.desc}),
       m("button.button[type=button]", {
         onclick: function () {

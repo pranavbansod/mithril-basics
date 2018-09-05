@@ -2,6 +2,7 @@ body, .input, .button {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     margin: 0;
+    padding: 10px 10px 10px 10px;
 }
 
 .toDo {
@@ -24,4 +25,34 @@ body, .input, .button {
 
 .toDo-item:hover {
     text-decoration: underline;
+}
+
+.label {
+    display: block;
+    margin: 10px 0px 10px;
+}
+
+.input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 15px;
+    width: 500px;
+}
+
+.button {
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #333;
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #bfbdbd;
 }
