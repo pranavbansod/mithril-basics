@@ -16,7 +16,7 @@ let addNewItemToTodo = function () {
   let items = ToDo.items;
   let lastItemIndex = items.length-1;
   let lastItem = items[lastItemIndex];
-  ToDo.items.push(item(lastItem.id,"Click here to edit description"))
+  ToDo.items.push(item(lastItem.id + 1,"Click here to edit description"))
 };
 
 
