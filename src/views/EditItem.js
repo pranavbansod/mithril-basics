@@ -5,7 +5,7 @@ module.exports = {
   oninit: function (vnode) {
     toDo.load(vnode.attrs.id)
   },
-  view: function () {
+  view: function (vnode) {
     return m("",[
       m("h3.label", "Description"),
       m("input.input#toDoEdit[type=text][placeholder=Write description for ToDo item]", {
@@ -16,7 +16,12 @@ module.exports = {
           let newDesc = document.getElementById("toDoEdit").value;
           toDo.currentItem.desc = newDesc;
         }
-      }, "Save"))
+      }, "Save")),
+      m("a",{href:"#!/toDo"},m("button.button[type=button]",{
+        onclick: function () {
+          toDo.deleteItem(vnode.attrs.id)
+        }
+      },"Delete"))
     ]);
   }
 };
