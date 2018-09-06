@@ -12,11 +12,20 @@ let loadCurrentItem = function (id) {
   }
 };
 
+let addNewItemToTodo = function () {
+  let items = ToDo.items;
+  let lastItemIndex = items.length-1;
+  let lastItem = items[lastItemIndex];
+  ToDo.items.push(item(lastItem.id,"Click here to edit description"))
+};
+
+
 let ToDo = {
   title: "Things to do today",
   items: [item(1, "Eat"), item(2, "Sleep"), item(3, "Anime")],
   currentItem: {},
-  load: loadCurrentItem
+  load: loadCurrentItem,
+  newItem: addNewItemToTodo
 };
 
 module.exports = ToDo;
