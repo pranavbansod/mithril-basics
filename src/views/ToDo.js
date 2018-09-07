@@ -2,6 +2,9 @@ const m = require("mithril");
 let ToDo = require("../models/ToDo");
 
 module.exports = {
+  oninit:function() {
+    ToDo.save();
+  },
   view: function () {
     return m(".toDo", m("h1", ToDo.title),m("button.addToDo",{
       onclick:function () {
