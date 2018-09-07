@@ -14,7 +14,7 @@ module.exports = {
       m("a",{href:"#!/toDo"},m("button.button[type=button]",{
         onclick: function() {
           let newDesc = document.getElementById("toDoEdit").value;
-          toDo.currentItem.desc = newDesc;
+          toDo.editDesc(newDesc);
         }
       }, "Save")),
       m("a",{href:"#!/toDo"},m("button.button[type=button]",{

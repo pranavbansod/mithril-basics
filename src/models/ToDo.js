@@ -12,6 +12,16 @@ let loadCurrentItem = function (id) {
   }
 };
 
+let getIndexOfItem = function (id) {
+  let items = ToDo.items;
+  for (let i = 0; i < items.length; i++) {
+    let item = items[i];
+    if (item.id == id) {
+      return items.indexOf(item);
+    }
+  }
+};
+
 let addNewItemToTodo = function () {
   let items = ToDo.items;
   if (items.length == 0) {
@@ -23,14 +33,8 @@ let addNewItemToTodo = function () {
   }
 };
 
-let getIndexOfItem = function (id) {
-  let items = ToDo.items;
-  for (let i = 0; i < items.length; i++) {
-    let item = items[i];
-    if (item.id == id) {
-      return items.indexOf(item);
-    }
-  }
+let editDesc = function(newDesc) {
+  ToDo.currentItem.desc = newDesc;
 };
 
 let deleteItem = function (id) {
@@ -45,6 +49,7 @@ let ToDo = {
   getIndexOfItem: getIndexOfItem,
   load: loadCurrentItem,
   newItem: addNewItemToTodo,
+  editDesc: editDesc,
   deleteItem: deleteItem
 };
 
