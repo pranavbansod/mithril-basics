@@ -1,6 +1,6 @@
-const m = require("mithril")
+const m = require("mithril");
 
-let toDo = require("./views/ToDo")
+let toDo = require("./views/ToDo");
 let editItem = require("./views/EditItem");
 
 m.route(document.body, "/toDo", {

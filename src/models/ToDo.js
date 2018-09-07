@@ -42,15 +42,27 @@ let deleteItem = function (id) {
   ToDo.items.splice(indexOfItem, 1);
 };
 
+let getItems = function () {
+  const ID = 'items';
+  let data = JSON.parse(localStorage.getItem(ID)) || JSON.parse('[]');
+  return data;
+};
+
+let save = function() {
+  const ID = 'items';
+  localStorage.setItem(ID,JSON.stringify(ToDo.items));
+};
+
 let ToDo = {
   title: "Things to do today",
-  items: [item(1, "Eat"), item(2, "Sleep"), item(3, "Anime")],
+  items: getItems(),
   currentItem: {},
   getIndexOfItem: getIndexOfItem,
   load: loadCurrentItem,
   newItem: addNewItemToTodo,
   editDesc: editDesc,
-  deleteItem: deleteItem
+  deleteItem: deleteItem,
+  save: save
 };
 
 module.exports = ToDo;

@@ -1,5 +1,5 @@
 var m = require("mithril");
-var toDo = require("../models/ToDo");
+let toDo = require("../models/ToDo");
 
 module.exports = {
   oninit: function (vnode) {
